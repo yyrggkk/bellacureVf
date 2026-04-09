@@ -21,7 +21,7 @@ services:
       - key: LOG_CHANNEL
         value: stderr
       - key: DB_CONNECTION
-        value: pgsql
+        value: mysql
       - key: DB_HOST
         sync: false
       - key: DB_PORT
@@ -32,8 +32,8 @@ services:
         sync: false
       - key: DB_PASSWORD
         sync: false
-      - key: DB_SSLMODE
-        value: require
+      - key: MYSQL_ATTR_SSL_CA
+        value: /etc/ssl/certs/ca-certificates.crt
       - key: SESSION_DRIVER
         value: database
       - key: CACHE_STORE
