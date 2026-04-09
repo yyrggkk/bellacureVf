@@ -3,8 +3,10 @@ services:
     name: bellacure-backend
     runtime: docker
     plan: free
-    dockerContext: backend/calendar-back-mobile-app
-    dockerfilePath: backend/calendar-back-mobile-app/Dockerfile
+    repo: https://github.com/yyrggkk/bellacure.git
+    branch: yassine-branch
+    dockerContext: .
+    dockerfilePath: Dockerfile
     envVars:
       - key: APP_NAME
         value: Bellacure API
